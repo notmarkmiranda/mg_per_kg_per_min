@@ -22,8 +22,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="2i1-Ax-GID">
-                                <rect key="frame" x="16" y="28" width="343" height="351.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="2i1-Ax-GID">
+                                <rect key="frame" x="16" y="28" width="343" height="366.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3Cv-iC-U93">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="43"/>
@@ -37,7 +37,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="g7e-fG-7sm">
-                                        <rect key="frame" x="0.0" y="58" width="343" height="47.5"/>
+                                        <rect key="frame" x="0.0" y="56" width="343" height="47.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PATIENT WEIGHT:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D99-15-pcB">
                                                 <rect key="frame" x="0.0" y="0.0" width="93" height="13.5"/>
@@ -83,7 +83,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dU7-2g-0SV">
-                                        <rect key="frame" x="0.0" y="120.5" width="343" height="46.5"/>
+                                        <rect key="frame" x="0.0" y="116.5" width="343" height="46.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="Wef-F4-loa">
                                                 <rect key="frame" x="0.0" y="0.0" width="343" height="46.5"/>
@@ -112,7 +112,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="iwy-xR-ezt">
-                                        <rect key="frame" x="0.0" y="182" width="343" height="46.5"/>
+                                        <rect key="frame" x="0.0" y="176" width="343" height="46.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOTAL ML DOSE OF DRUG:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lof-a5-2QM">
                                                 <rect key="frame" x="0.0" y="0.0" width="141.5" height="13.5"/>
@@ -133,7 +133,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="SVF-L1-Irc">
-                                        <rect key="frame" x="0.0" y="243.5" width="343" height="46.5"/>
+                                        <rect key="frame" x="0.0" y="235.5" width="343" height="46.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RATE OF ML/HR:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XTJ-Xf-Dwv">
                                                 <rect key="frame" x="0.0" y="0.0" width="86" height="13.5"/>
@@ -154,7 +154,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="E6L-14-3gu">
-                                        <rect key="frame" x="0.0" y="305" width="343" height="46.5"/>
+                                        <rect key="frame" x="0.0" y="295" width="343" height="46.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MG / KG / MIN:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jaq-HJ-L79">
                                                 <rect key="frame" x="0.0" y="0.0" width="76" height="13.5"/>
@@ -174,6 +174,23 @@
                                             <constraint firstItem="NN9-K8-IEX" firstAttribute="leading" secondItem="E6L-14-3gu" secondAttribute="leading" id="esu-9P-Frb"/>
                                         </constraints>
                                     </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1zC-xf-2vh">
+                                        <rect key="frame" x="0.0" y="354.5" width="343" height="12"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOU CAN ONLY LEAVE 1 FIELD BLANK TO CALCULATE VALUES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sXO-je-c2j">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="12"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="10"/>
+                                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="sXO-je-c2j" firstAttribute="centerX" secondItem="1zC-xf-2vh" secondAttribute="centerX" id="4OF-mp-jSh"/>
+                                            <constraint firstAttribute="bottom" secondItem="sXO-je-c2j" secondAttribute="bottom" id="NHR-ub-wzX"/>
+                                            <constraint firstItem="sXO-je-c2j" firstAttribute="leading" secondItem="1zC-xf-2vh" secondAttribute="leading" id="diL-wS-E77"/>
+                                            <constraint firstAttribute="trailing" secondItem="sXO-je-c2j" secondAttribute="trailing" id="tPH-fj-Ogf"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="E6L-14-3gu" secondAttribute="trailing" id="2E1-lo-PpT"/>
@@ -182,10 +199,13 @@
                                     <constraint firstAttribute="trailing" secondItem="dU7-2g-0SV" secondAttribute="trailing" id="KTI-v7-ApD"/>
                                     <constraint firstAttribute="trailing" secondItem="SVF-L1-Irc" secondAttribute="trailing" id="MeE-dj-wkY"/>
                                     <constraint firstItem="g7e-fG-7sm" firstAttribute="leading" secondItem="2i1-Ax-GID" secondAttribute="leading" id="QBZ-Ai-Gzq"/>
+                                    <constraint firstItem="1zC-xf-2vh" firstAttribute="leading" secondItem="2i1-Ax-GID" secondAttribute="leading" id="TBI-5l-e0l"/>
                                     <constraint firstAttribute="trailing" secondItem="3Cv-iC-U93" secondAttribute="trailing" id="U8I-g3-lRq"/>
                                     <constraint firstAttribute="trailing" secondItem="iwy-xR-ezt" secondAttribute="trailing" id="dRc-AH-wb1"/>
                                     <constraint firstAttribute="trailing" secondItem="g7e-fG-7sm" secondAttribute="trailing" id="myh-OG-kEt"/>
+                                    <constraint firstAttribute="bottom" secondItem="1zC-xf-2vh" secondAttribute="bottom" id="qbh-hv-Ppc"/>
                                     <constraint firstItem="E6L-14-3gu" firstAttribute="leading" secondItem="2i1-Ax-GID" secondAttribute="leading" id="rEk-ti-9a9"/>
+                                    <constraint firstAttribute="trailing" secondItem="1zC-xf-2vh" secondAttribute="trailing" id="wOR-F0-HWi"/>
                                     <constraint firstItem="SVF-L1-Irc" firstAttribute="leading" secondItem="2i1-Ax-GID" secondAttribute="leading" id="ws9-gW-1FL"/>
                                     <constraint firstItem="dU7-2g-0SV" firstAttribute="leading" secondItem="2i1-Ax-GID" secondAttribute="leading" id="z9Q-rR-DqI"/>
                                     <constraint firstItem="iwy-xR-ezt" firstAttribute="leading" secondItem="2i1-Ax-GID" secondAttribute="leading" id="zXm-hx-duv"/>
@@ -202,6 +222,7 @@
                     <connections>
                         <outlet property="doseOfDrugGramsField" destination="bWx-1x-Hl9" id="HFL-bX-MZx"/>
                         <outlet property="doseOfDrugMLField" destination="oap-f9-u5v" id="Bmk-vk-Bxe"/>
+                        <outlet property="errorLabel" destination="sXO-je-c2j" id="wPD-w7-jBd"/>
                         <outlet property="kgLbSwitch" destination="Be2-pb-VpY" id="3KR-Ta-YdN"/>
                         <outlet property="mgKgMinField" destination="NN9-K8-IEX" id="KtT-ke-lBD"/>
                         <outlet property="patientWeightField" destination="ae8-iA-Q0v" id="nut-gz-VGZ"/>
