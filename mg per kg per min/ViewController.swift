@@ -50,8 +50,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     rateOfMLHrField.nextField = mgKgMinField
     mgKgMinField.prevField = rateOfMLHrField
     mgKgMinField.nextField = patientWeightField
-    
-    
   }
   
   func setDelegates() {
@@ -101,9 +99,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
   }
   
   func updateModel() {
-    // (1 / kg) * (dose g / total mL) * (1000mg / 1g) * (rate mL / 1 hour) * (1 hour / 60 min)
-    //    let x = mgKgMinField
-    
     calcModel.patientWeight = patientWeightField.text!
     calcModel.doseOfDrugGrams = doseOfDrugGramsField.text!
     calcModel.doseOfDrugML = doseOfDrugMLField.text!
@@ -111,13 +106,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     calcModel.mgKgMin = mgKgMinField.text!
     
     calc()
-    
-    
-    // 70KG - Weight
-    // 240 - rate of mL / hour
-    // 800 - total mL of Drug
-    // 40 - Dose of Drug
-    // 2.857 - mg / kg / min
   }
   
   func calc() {
@@ -126,19 +114,24 @@ class ViewController: UIViewController, UITextFieldDelegate {
       mgKgMinField.text = calcModel.solveFormGKgMin
     case patientWeightField:
       patientWeightField.text = calcModel.solveForPatientWeight
+    case doseOfDrugGramsField:
+      doseOfDrugGramsField.text = calcModel.solveForDoseInGrams
+    case doseOfDrugMLField:
+      doseOfDrugMLField.text = calcModel.solveForDoseinML
+    case rateOfMLHrField:
+      rateOfMLHrField.text = calcModel.solveForRateOfMLHr
     default: break
     }
   }
   
   func findBlanks() throws {
     var blanks = 0
-    for field in [patientWeightField, doseOfDrugMLField, doseOfDrugMLField, rateOfMLHrField, mgKgMinField] {
+    for field in [patientWeightField, doseOfDrugGramsField, doseOfDrugMLField, rateOfMLHrField, mgKgMinField] {
       if field!.text!.characters.count == 0 {
         solveForField = field
         blanks += 1
       }
     }
-    
     guard blanks == 1 else {
       if blanks == 0 {
         throw BlanksError.none
@@ -157,7 +150,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
   
   // MARK: - Outlets
   @IBOutlet weak var patientWeightField: UITextField!
-  @IBOutlet weak var kgLbSwitch: UISwitch!
   @IBOutlet weak var doseOfDrugGramsField: UITextField!
   @IBOutlet weak var doseOfDrugMLField: UITextField!
   @IBOutlet weak var rateOfMLHrField: UITextField!

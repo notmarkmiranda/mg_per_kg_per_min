@@ -39,6 +39,34 @@ class CalcModel {
   
   let formatter = NumberFormatter()
   
+  var solveForPatientWeight: String {
+    formatter.numberStyle = .decimal
+    let numerator = ((doseOfDrugGramsAsDecimal as Decimal) * 1000 * (rateOfMLHrAsDecimal as Decimal))
+    let denominator = ((mgKgMinAsDecimal as Decimal) * (doseofDrugMLAsDecimal as Decimal) * 60)
+    return formatter.string(from: numerator / denominator as NSNumber)!
+  }
+  
+  var solveForDoseInGrams: String {
+    formatter.numberStyle = .decimal
+    let numerator = ((mgKgMinAsDecimal as Decimal) * (patientWeightAsDecimal as Decimal) * (doseofDrugMLAsDecimal as Decimal) * 60)
+    let denominator = (1000 * (rateOfMLHrAsDecimal as Decimal))
+    return formatter.string(from: numerator / denominator as NSNumber)!
+  }
+  
+  var solveForDoseinML: String {
+    formatter.numberStyle = .decimal
+    let numerator = ((doseOfDrugGramsAsDecimal as Decimal) * 1000 * (rateOfMLHrAsDecimal as Decimal))
+    let denominator = ((mgKgMinAsDecimal as Decimal) * (patientWeightAsDecimal as Decimal) * 60)
+    return formatter.string(from: numerator / denominator as NSNumber)!
+  }
+  
+  var solveForRateOfMLHr: String {
+    formatter.numberStyle = .decimal
+    let numerator = ((mgKgMinAsDecimal as Decimal) * (patientWeightAsDecimal as Decimal) * (doseofDrugMLAsDecimal as Decimal) * 60)
+    let denominator = ((doseOfDrugGramsAsDecimal as Decimal) * 1000)
+    return formatter.string(from: numerator / denominator as NSNumber)!
+  }
+  
   var solveFormGKgMin: String {
     formatter.numberStyle = .decimal
     let numerator = ((doseOfDrugGramsAsDecimal as Decimal) * 1000 * (rateOfMLHrAsDecimal as Decimal))
@@ -46,10 +74,4 @@ class CalcModel {
     return formatter.string(from: numerator / denominator as NSNumber)!
   }
   
-  var solveForPatientWeight: String {
-    formatter.numberStyle = .decimal
-    let numerator = ((doseOfDrugGramsAsDecimal as Decimal) * 1000 * (rateOfMLHrAsDecimal as Decimal))
-    let denominator = ((mgKgMinAsDecimal as Decimal) * (doseofDrugMLAsDecimal as Decimal) * 60)
-    return formatter.string(from: numerator / denominator as NSNumber)!
-  }
 }

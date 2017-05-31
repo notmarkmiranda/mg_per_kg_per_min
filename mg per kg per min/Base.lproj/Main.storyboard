@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="2i1-Ax-GID">
-                                <rect key="frame" x="16" y="28" width="343" height="366.5"/>
+                                <rect key="frame" x="16" y="28" width="343" height="365.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3Cv-iC-U93">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="43"/>
@@ -37,7 +37,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="g7e-fG-7sm">
-                                        <rect key="frame" x="0.0" y="56" width="343" height="47.5"/>
+                                        <rect key="frame" x="0.0" y="56" width="343" height="46.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PATIENT WEIGHT:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D99-15-pcB">
                                                 <rect key="frame" x="0.0" y="0.0" width="93" height="13.5"/>
@@ -46,34 +46,14 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="6Tc-gt-mUY">
-                                                <rect key="frame" x="0.0" y="16.5" width="343" height="31"/>
+                                                <rect key="frame" x="0.0" y="16.5" width="343" height="30"/>
                                                 <subviews>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="252" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ae8-iA-Q0v">
-                                                        <rect key="frame" x="0.0" y="0.0" width="216" height="31"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" returnKeyType="go"/>
                                                     </textField>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sZJ-z8-Zag">
-                                                        <rect key="frame" x="231" y="0.0" width="112" height="31"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LB" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVg-Zc-Bs4">
-                                                                <rect key="frame" x="0.0" y="5.5" width="20.5" height="20.5"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Be2-pb-VpY">
-                                                                <rect key="frame" x="30.5" y="0.0" width="51" height="31"/>
-                                                            </switch>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KG" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NB2-8a-cVJ">
-                                                                <rect key="frame" x="89.5" y="5.5" width="22.5" height="20.5"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                        </subviews>
-                                                    </stackView>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
@@ -83,7 +63,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dU7-2g-0SV">
-                                        <rect key="frame" x="0.0" y="116.5" width="343" height="46.5"/>
+                                        <rect key="frame" x="0.0" y="115.5" width="343" height="46.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="Wef-F4-loa">
                                                 <rect key="frame" x="0.0" y="0.0" width="343" height="46.5"/>
@@ -112,7 +92,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="iwy-xR-ezt">
-                                        <rect key="frame" x="0.0" y="176" width="343" height="46.5"/>
+                                        <rect key="frame" x="0.0" y="175" width="343" height="46.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOTAL ML DOSE OF DRUG:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lof-a5-2QM">
                                                 <rect key="frame" x="0.0" y="0.0" width="141.5" height="13.5"/>
@@ -133,7 +113,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="SVF-L1-Irc">
-                                        <rect key="frame" x="0.0" y="235.5" width="343" height="46.5"/>
+                                        <rect key="frame" x="0.0" y="234.5" width="343" height="46.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RATE OF ML/HR:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XTJ-Xf-Dwv">
                                                 <rect key="frame" x="0.0" y="0.0" width="86" height="13.5"/>
@@ -154,7 +134,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="E6L-14-3gu">
-                                        <rect key="frame" x="0.0" y="295" width="343" height="46.5"/>
+                                        <rect key="frame" x="0.0" y="294" width="343" height="46.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MG / KG / MIN:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jaq-HJ-L79">
                                                 <rect key="frame" x="0.0" y="0.0" width="76" height="13.5"/>
@@ -175,7 +155,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1zC-xf-2vh">
-                                        <rect key="frame" x="0.0" y="354.5" width="343" height="12"/>
+                                        <rect key="frame" x="0.0" y="353.5" width="343" height="12"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOU CAN ONLY LEAVE 1 FIELD BLANK TO CALCULATE VALUES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sXO-je-c2j">
                                                 <rect key="frame" x="0.0" y="0.0" width="343" height="12"/>
@@ -223,7 +203,6 @@
                         <outlet property="doseOfDrugGramsField" destination="bWx-1x-Hl9" id="HFL-bX-MZx"/>
                         <outlet property="doseOfDrugMLField" destination="oap-f9-u5v" id="Bmk-vk-Bxe"/>
                         <outlet property="errorLabel" destination="sXO-je-c2j" id="wPD-w7-jBd"/>
-                        <outlet property="kgLbSwitch" destination="Be2-pb-VpY" id="3KR-Ta-YdN"/>
                         <outlet property="mgKgMinField" destination="NN9-K8-IEX" id="KtT-ke-lBD"/>
                         <outlet property="patientWeightField" destination="ae8-iA-Q0v" id="nut-gz-VGZ"/>
                         <outlet property="rateOfMLHrField" destination="Cg3-uv-RlU" id="Ex8-2H-eIx"/>
