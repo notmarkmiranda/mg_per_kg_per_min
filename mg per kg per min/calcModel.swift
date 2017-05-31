@@ -74,4 +74,36 @@ class CalcModel {
     return formatter.string(from: numerator / denominator as NSNumber)!
   }
   
+  var mgPerKg: String {
+    formatter.numberStyle = .decimal
+    return formatter.string(from: (doseOfDrugGramsAsDecimal as Decimal) * 1000 / (patientWeightAsDecimal as Decimal) as NSNumber)!
+  }
+  
+  var infusionLength: String {
+//    formatter.numberStyle = .decimal
+    let timeAsDecimal = (doseofDrugMLAsDecimal as Double) / (rateOfMLHrAsDecimal as Double)
+    return convertDecimalToTime(timeAsDecimal)
+//    let timeInWords = convertDecimalToTime(timeAsDecimal)
+//    return formatter.string(from: timeInWords)!
+  }
+  
+  
+  func convertDecimalToTime(_ decimal: Double) -> String {
+    let hours = Int(decimal)
+    let minutes = Int((decimal - Double(hours)) * 60)
+    var hourString = ""
+    var minuteString = ""
+    if hours == 1 {
+     hourString = "\(hours) hour"
+    } else {
+      hourString = "\(hours) hours"
+    }
+    if minutes == 1 {
+     minuteString = "\(minutes) minute"
+    } else {
+      minuteString = "\(minutes) minutes"
+    }
+    return "\(hourString), \(minuteString)"
+  }
+  
 }

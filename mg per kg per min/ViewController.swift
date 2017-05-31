@@ -14,10 +14,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
   override func viewDidLoad() {
     super.viewDidLoad()
     hideErrors()
+    hideStats()
     setDelegates()
     setNextAndPrevious()
     addAccessoryView(patientWeightField)
   }
+  
   
   // MARK: - Properties
   var activeTextField: UITextField?
@@ -32,6 +34,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
   
   func hideErrors() {
     errorLabel.isHidden = true
+  }
+  
+  func hideStats() {
+    statStack.isHidden = true
   }
   
   func showErrors(message: String) {
@@ -122,6 +128,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
       rateOfMLHrField.text = calcModel.solveForRateOfMLHr
     default: break
     }
+    updateStats()
+    activeTextField?.resignFirstResponder()
+  }
+  
+  func updateStats() -> Void {
+    statStack.isHidden = false
+    mgPerKgLabel.text = calcModel.mgPerKg
+    infusionLengthLabel.text = calcModel.infusionLength
   }
   
   func findBlanks() throws {
@@ -155,6 +169,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
   @IBOutlet weak var rateOfMLHrField: UITextField!
   @IBOutlet weak var mgKgMinField: UITextField!
   @IBOutlet weak var errorLabel: UILabel!
+  
+  @IBOutlet weak var statStack: UIStackView!
+  @IBOutlet weak var mgPerKgLabel: UILabel!
+  @IBOutlet weak var infusionLengthLabel: UILabel!
 }
 
 
