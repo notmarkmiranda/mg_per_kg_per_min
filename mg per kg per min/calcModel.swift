@@ -11,7 +11,6 @@ let calcModel = CalcModel()
 
 class CalcModel {
   var patientWeight = "0"
-  var kgOrLb: Bool = true
   var doseOfDrugGrams = "0"
   var doseOfDrugML = "0"
   var rateOfMLHr = "0"
@@ -43,35 +42,41 @@ class CalcModel {
     formatter.numberStyle = .decimal
     let numerator = ((doseOfDrugGramsAsDecimal as Decimal) * 1000 * (rateOfMLHrAsDecimal as Decimal))
     let denominator = ((mgKgMinAsDecimal as Decimal) * (doseofDrugMLAsDecimal as Decimal) * 60)
-    return formatter.string(from: numerator / denominator as NSNumber)!
+    return updateVars(&patientWeight, numerator: numerator, denominator: denominator)
   }
   
   var solveForDoseInGrams: String {
     formatter.numberStyle = .decimal
     let numerator = ((mgKgMinAsDecimal as Decimal) * (patientWeightAsDecimal as Decimal) * (doseofDrugMLAsDecimal as Decimal) * 60)
     let denominator = (1000 * (rateOfMLHrAsDecimal as Decimal))
-    return formatter.string(from: numerator / denominator as NSNumber)!
+    return updateVars(&doseOfDrugGrams, numerator: numerator, denominator: denominator)
   }
   
   var solveForDoseinML: String {
     formatter.numberStyle = .decimal
     let numerator = ((doseOfDrugGramsAsDecimal as Decimal) * 1000 * (rateOfMLHrAsDecimal as Decimal))
     let denominator = ((mgKgMinAsDecimal as Decimal) * (patientWeightAsDecimal as Decimal) * 60)
-    return formatter.string(from: numerator / denominator as NSNumber)!
+    return updateVars(&doseOfDrugML, numerator: numerator, denominator: denominator)
   }
   
   var solveForRateOfMLHr: String {
     formatter.numberStyle = .decimal
     let numerator = ((mgKgMinAsDecimal as Decimal) * (patientWeightAsDecimal as Decimal) * (doseofDrugMLAsDecimal as Decimal) * 60)
     let denominator = ((doseOfDrugGramsAsDecimal as Decimal) * 1000)
-    return formatter.string(from: numerator / denominator as NSNumber)!
+    return updateVars(&rateOfMLHr, numerator: numerator, denominator: denominator)
   }
   
   var solveFormGKgMin: String {
     formatter.numberStyle = .decimal
     let numerator = ((doseOfDrugGramsAsDecimal as Decimal) * 1000 * (rateOfMLHrAsDecimal as Decimal))
     let denominator = ((patientWeightAsDecimal as Decimal) * (doseofDrugMLAsDecimal as Decimal) * 60)
-    return formatter.string(from: numerator / denominator as NSNumber)!
+    return updateVars(&mgKgMin, numerator: numerator, denominator: denominator)
+  }
+
+  func updateVars(_ variable: inout String , numerator: Decimal, denominator: Decimal) -> String {
+    let answer = formatter.string(from: numerator / denominator as NSNumber)!
+    variable = answer
+    return answer
   }
   
   var mgPerKg: String {
@@ -80,29 +85,15 @@ class CalcModel {
   }
   
   var infusionLength: String {
-//    formatter.numberStyle = .decimal
     let timeAsDecimal = (doseofDrugMLAsDecimal as Double) / (rateOfMLHrAsDecimal as Double)
     return convertDecimalToTime(timeAsDecimal)
-//    let timeInWords = convertDecimalToTime(timeAsDecimal)
-//    return formatter.string(from: timeInWords)!
   }
-  
   
   func convertDecimalToTime(_ decimal: Double) -> String {
     let hours = Int(decimal)
     let minutes = Int((decimal - Double(hours)) * 60)
-    var hourString = ""
-    var minuteString = ""
-    if hours == 1 {
-     hourString = "\(hours) hour"
-    } else {
-      hourString = "\(hours) hours"
-    }
-    if minutes == 1 {
-     minuteString = "\(minutes) minute"
-    } else {
-      minuteString = "\(minutes) minutes"
-    }
+    let hourString = hours == 1 ? "\(hours) hour" : "\(hours) hours"
+    let minuteString = minutes == 1 ? "\(minutes) minute" : "\(minutes) minutes"
     return "\(hourString), \(minuteString)"
   }
   

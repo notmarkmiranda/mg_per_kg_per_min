@@ -146,14 +146,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
         blanks += 1
       }
     }
+    
     guard blanks == 1 else {
       if blanks == 0 {
         throw BlanksError.none
       } else {
         throw BlanksError.tooMany
       }
-      
     }
+    
   }
   
   func textFieldDidBeginEditing(_ textField: UITextField) {

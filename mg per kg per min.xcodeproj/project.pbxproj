@@ -99,8 +99,8 @@
 				TargetAttributes = {
 					DA1349E71ED9CA0A00037D1F = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 4XQSAD3UT9;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = 2F4PGNV9HX;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -267,11 +267,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4XQSAD3UT9;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Mark Miranda (95AJ94SX56)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos10.3]" = "iPhone Developer: Mark Miranda (95AJ94SX56)";
+				DEVELOPMENT_TEAM = 2F4PGNV9HX;
 				INFOPLIST_FILE = "mg per kg per min/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "ninja.markmiranda.mg-per-kg-per-min";
+				PRODUCT_BUNDLE_IDENTIFIER = "ninja.markmiranda.dosage-calc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "fcbbb692-061a-4a2f-9e83-ddec7b9b9582";
+				PROVISIONING_PROFILE_SPECIFIER = "Dosage Calc Distribution";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -280,11 +286,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4XQSAD3UT9;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Mark Miranda (95AJ94SX56)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Mark Miranda (95AJ94SX56)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos10.3]" = "iPhone Distribution: Mark Miranda (2F4PGNV9HX)";
+				DEVELOPMENT_TEAM = 2F4PGNV9HX;
 				INFOPLIST_FILE = "mg per kg per min/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "ninja.markmiranda.mg-per-kg-per-min";
+				PRODUCT_BUNDLE_IDENTIFIER = "ninja.markmiranda.dosage-calc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "fcbbb692-061a-4a2f-9e83-ddec7b9b9582";
+				PROVISIONING_PROFILE_SPECIFIER = "Dosage Calc Distribution";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
